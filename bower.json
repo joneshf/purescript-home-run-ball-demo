@@ -1,0 +1,18 @@
+{
+  "name": "purescript-home-run-ball-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^3.1.0",
+    "purescript-console": "^3.0.0",
+    "purescript-home-run-ball": "^0.1.0",
+    "purescript-sparkle": "^4.1.1"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0"
+  }
+}
