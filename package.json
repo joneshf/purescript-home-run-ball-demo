@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pulp browserify --to docs/index.js",
+    "build": "cp bower_components/purescript-sparkle/assets/sparkle.css docs/sparkle.css && pulp browserify --to docs/index.js",
     "pulp": "pulp"
   },
   "author": "",
