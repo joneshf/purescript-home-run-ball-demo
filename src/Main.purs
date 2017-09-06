@@ -38,10 +38,8 @@ containsFoo = RProxy
 endsWithBang :: RProxy (endsWithBang :: EndsWith "!")
 endsWithBang = RProxy
 
-type ValidatedString (rules :: # Type) = Const' String (RProxy rules)
-
 newtype VS' a
-  = VS' (V (NonEmptyList String) (ValidatedString a))
+  = VS' (V (NonEmptyList String) (Const' String (RProxy a)))
 
 derive instance newtypeVS' :: Newtype (VS' a) _
 
