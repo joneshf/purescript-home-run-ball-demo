@@ -21250,10 +21250,10 @@ var genericConst$prime = function (dictGeneric) {
         } ]);
     });
 };
-var fromVS = function (v) {
-    return VS$prime(Data_Functor.map(Data_Validation_Semigroup.functorV)(function ($19) {
-        return Data_Newtype.wrap(newtypeConst$prime)(Data_Newtype.unwrap(Data_Const.newtypeConst)($19));
-    })(v));
+var fromVS = function ($19) {
+    return VS$prime(Data_Functor.map(Data_Validation_Semigroup.functorV)(function ($20) {
+        return Data_Newtype.wrap(newtypeConst$prime)(Data_Newtype.unwrap(Data_Const.newtypeConst)($20));
+    })($19));
 };
 var endsWithBang = Type_Row.RProxy.value;
 var containsFoo = Type_Row.RProxy.value;
@@ -21261,36 +21261,36 @@ var capitalized = Type_Row.RProxy.value;
 var beginsWithApple = Type_Row.RProxy.value;
 var allCaps = Type_Row.RProxy.value;
 var main = function __do() {
-    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("AllCaps")(function ($20) {
+    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("AllCaps")(function ($21) {
         return fromVS(HomeRunBall.checkRules()(HomeRunBall.checkRulesCons(new Data_Symbol.IsSymbol(function () {
             return "allCaps";
-        }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleAllCaps))(allCaps)($20));
+        }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleAllCaps))(allCaps)($21));
     })();
-    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("BeginsWith \"Apple\"")(function ($21) {
+    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("BeginsWith \"Apple\"")(function ($22) {
         return fromVS(HomeRunBall.checkRules()(HomeRunBall.checkRulesCons(new Data_Symbol.IsSymbol(function () {
             return "beginsWithApple";
         }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleBeginsWith(new Data_Symbol.IsSymbol(function () {
             return "Apple";
-        }))))(beginsWithApple)($21));
+        }))))(beginsWithApple)($22));
     })();
-    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("Capitalized")(function ($22) {
+    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("Capitalized")(function ($23) {
         return fromVS(HomeRunBall.checkRules()(HomeRunBall.checkRulesCons(new Data_Symbol.IsSymbol(function () {
             return "capitalized";
-        }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleCapitalized))(capitalized)($22));
+        }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleCapitalized))(capitalized)($23));
     })();
-    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("Contains \"Foo\"")(function ($23) {
+    Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("Contains \"Foo\"")(function ($24) {
         return fromVS(HomeRunBall.checkRules()(HomeRunBall.checkRulesCons(new Data_Symbol.IsSymbol(function () {
             return "containsFoo";
         }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleContains(new Data_Symbol.IsSymbol(function () {
             return "foo";
-        }))))(containsFoo)($23));
+        }))))(containsFoo)($24));
     })();
-    return Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("EndsWith \"!\"")(function ($24) {
+    return Sparkle["sparkle'"](Sparkle.interactiveFunction(Sparkle.flammableString)(interactiveVS(genericConst$prime(Data_Generic.genericString))))("content")("EndsWith \"!\"")(function ($25) {
         return fromVS(HomeRunBall.checkRules()(HomeRunBall.checkRulesCons(new Data_Symbol.IsSymbol(function () {
             return "endsWithBang";
         }))(HomeRunBall.checkRulesNil)(HomeRunBall.validateRuleEndsWith(new Data_Symbol.IsSymbol(function () {
             return "!";
-        }))))(endsWithBang)($24));
+        }))))(endsWithBang)($25));
     })();
 };
 module.exports = {

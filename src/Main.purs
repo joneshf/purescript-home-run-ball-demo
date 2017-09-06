@@ -1,18 +1,28 @@
 module Main where
 
-import Prelude
-
+import Control.Bind (discard)
 import Control.Monad.Eff (Eff)
+import Control.Semigroupoid ((<<<))
+
 import DOM (DOM)
+
 import Data.Either (Either(..))
+import Data.Function (($))
+import Data.Functor (map)
 import Data.Generic (class Generic)
 import Data.List.Types (NonEmptyList)
 import Data.Newtype (class Newtype, unwrap, wrap)
+import Data.Unit (Unit)
 import Data.Validation.Semigroup (V, unV)
+
 import Flare (UI)
+
 import HomeRunBall (AllCaps, BeginsWith, Capitalized, Contains, EndsWith, VS, checkRules)
+
 import Signal.Channel (CHANNEL)
+
 import Sparkle (class Interactive, Renderable, interactive, sparkle')
+
 import Type.Prelude (RProxy(..))
 
 main :: forall e. Eff (channel :: CHANNEL, dom :: DOM | e) Unit
@@ -38,13 +48,15 @@ containsFoo = RProxy
 endsWithBang :: RProxy (endsWithBang :: EndsWith "!")
 endsWithBang = RProxy
 
+-- Boilerplate until more instances exist
+
 newtype VS' a
   = VS' (V (NonEmptyList String) (Const' String (RProxy a)))
 
 derive instance newtypeVS' :: Newtype (VS' a) _
 
 fromVS :: forall a. VS a -> VS' a
-fromVS v = VS' $ wrap <<< unwrap <$> v
+fromVS = VS' <<< map (wrap <<< unwrap)
 
 newtype Const' a b
   = Const' a
